@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tạo hàm nhận vào tham số  </title>
+</head>
+<body>
+<p id ="aa"></p>
+<script>
+    function f(d) {
+        return d +1;
+    }
+    function print(){
+        let b =Number(prompt("nhap so  cần tìm "));
+        let c =f(b);
+        document.getElementById("aa").innerText = c;
+    }
+    print();
+</script>
+</body>
+</html>
