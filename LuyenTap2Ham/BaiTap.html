@@ -2,9 +2,164 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Luyện tập 2 của Funcion</title>
 </head>
 <body>
-$END$
+<h3>
+    WellCom! Luyện tập hàm 2
+</h3>
+<p>
+    Bài 1: Viết hàm tính bình phương của một số bất kỳ được đưa vào. Gọi hàm vừa xây dựng được.
+</p>
+<input type="button" value=" bai1" onclick="bai1();">
+<p>
+    Bài 2: Viết hàm tính diện tích, hàm tính chu vi hình tròn. Gọi hàm vừa xây dựng được
+</p>
+<input type="button" value=" bai2" onclick="bai2();">
+<p>
+    Bài 3: Viết hàm tính giai thừa của một số nguyên bất kỳ được đưa vào. Gọi hàm vừa xây dựng được.
+</p>
+<input type="button" value=" bai3" onclick="bai3()">
+<p>
+    Bài 4: Viết hàm kiểm tra xem ký tự nhập vào có phải là ký tự số không. Nếu là ký tự số hàm trả về true, ngược lại
+    trả về false.
+</p>
+<input type="button" value=" bai4" onclick="bai4();">
+<p>
+    Bài 5: Viết hàm nhận vào 3 số nguyên bất kỳ, trả về số nguyên có giá trị nhỏ nhất.
+</p>
+<input type="button" value=" bai5" onclick="bai5();">
+<p>
+    Bài 6: Viết hàm nhận vào một số, kiểm tra xem nếu số đưa vào có phải là nguyên dương không. Nếu là nguyên dương trả
+    về true, ngược lại trả về false.
+</p>
+<input type="button" value=" bai6" onclick="bai6(prompt())">
+<p>
+    Bài 7: Viết hàm truyền vào 2 số nguyên bất kì, thực hiện đổi chỗ hai số nguyên đó.
+</p>
+<input type="button" value=" bai7" onclick="bai7();">
+<p>
+    Bài 8: Viết hàm truyền vào mảng số nguyên bất kỳ, sau đó đảo ngược mảng số nguyên đó.
+</p>
+<input type="button" value=" bai8" onclick="bai8();">
+<p>
+    Bài 9: Viết hàm truyền vào một mảng ký tự, và một ký tự bất kỳ, kiểm tra xem ký tự bất kỳ đó có nằm trong mảng
+    không. Nếu có trả về số lần xuất hiện của ký tự đó, nếu không trả về -1.
+</p>
+<input type="button" value=" bai9" onclick="bai9()">
+
+<script>
+ function bai1(){
+     let a = Number(prompt("Nhập số a"))
+    // let b = Number(prompt("Nhập số b"))
+     document.write("Bình phương của a :"+a*a)
+
+ }
+ function bai2(){
+     let a = Number(prompt("Nhập bán kính đường tròn "));
+     let b = 3.14 * a*a;
+     let c = a* 2 * 3.14;
+     document.write("Diện tích hình tròn"+b);
+     document.write("Chu vu hình tròn"+c);
+
+ }
+ function bai3(){
+     let a = Number(prompt("Nhập số cần  tính giai  thừa"))
+     let factorial  = 1 ;
+     for(let i  = 1 ;i<=a;i++){
+         factorial =factorial *i;
+
+     }
+     document.write("Gia thừa của "+a+"bằng"+factorial);
+
+ }
+ function bai4(){
+     let a = prompt("Nhập ký  tự  cần kiểm tra ");
+    if(isNaN(a) == false){
+       alert(isNaN(a));
+    }else{
+        alert(isNaN(a));
+    }
+
+
+
+ }
+ function bai5(){
+     let arry =[];
+     let min =0;
+     for(let i =0;i <3;i++){
+         let a =Number(prompt("Nhập  phần tử"+(i+1)));
+          arry[i] = a;
+
+          }
+     for ( let i =0 ;i <arry.length;i++){
+         if(i == 0){
+             min = arry[0];
+         }else if(arry[i] <min){
+             min =arry[i];
+         }
+     }
+     document.write("phần tử của mảng"+arry+"</br>");
+     document.write("phần tử nhỏ nhất :"+min);
+     }
+  function bai6(a) {
+      if(a>0 ){
+          a =true;
+          document.write(a);
+
+      }else{
+          a=false;
+          document.write(a);
+      }
+  }
+  function bai7() {
+     let a =Number(prompt("nhập sô a"));
+     let b = Number(prompt("nhập số b"));
+     document.write("đổi chỗ "+b+","+a);
+
+  }
+function bai8() {
+     let a =Number(prompt("nhâp số  phần tử"))
+     let arry = [];
+     for( let i =0;i<a;i++){
+         let a = Number(prompt("nhập số  phần tử thứ"+(i+1)));
+         arry[i] =a;
+     }
+     let provisi ;
+     for(let i =0 ; i < arry.length;i++){
+         provisi =arry[i];
+        arry[i] =  arry[arry.length-1] ;
+        arry[arry.length-1] =provisi;
+
+     }
+     // arry.reverse();
+    document.write("số sau khi chuyển đổi"+arry);
+}
+function bai9(){
+     let a =Number(prompt("nhập  phần tử  mảng"));
+     let arry = new Array();
+     for(let i =0;i<a;i++){
+         let b =prompt("nhập phần tủ "+(i+1));
+         arry[i]= b;
+     }
+     let search =prompt("nhập  ký tự cần  tìm");
+     let count =0;
+     let index = -1;
+     for (let i =0;i<arry.length;i++){
+         if(search === arry[i]){
+             count =count+1;
+             index = i;
+         }
+
+     }
+     if(index >-1){
+         document.write(search +"appear :"+count+"times"+" at position"+index)
+     }else{
+         document.write( "Search resultsgit"+index +"not search "+search)
+     }
+
+}
+
+</script>
 </body>
 </html>
