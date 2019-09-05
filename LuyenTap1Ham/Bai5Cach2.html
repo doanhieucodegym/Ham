@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tim Sao </title>
+</head>
+<body>
+<p>
+    Search stars
+</p>
+<input type="button" value=" Search " onclick="search(prompt())"/>
+<script>
+    let constellation = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+    let arryStar =[ "Polaris", "Aldebaran", "Deneb", "Vega", "Altair"," Dubhe", "Regulus"];
+    function search(tim) {
+       let ss =true;
+       for( let i= 0;i <arryStar.length;i++ ){
+           if(tim === arryStar[i]){
+               document.write(constellation[i])
+               ss= false;
+               break;
+           }
+       }
+      if(ss){
+          document.write("There are not stars like this!")
+      }
+
+    }
+
+</script>
+</body>
+</html>

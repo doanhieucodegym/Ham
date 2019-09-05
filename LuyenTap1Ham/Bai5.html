@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tim phần  tử của 2 mảng </title>
+</head>
+<body>
+<script>
+    function star(search){
+
+        let index = -1;
+        for (let i =0 ; i < arryStar.length;i++){
+            if(search === arryStar[i]){
+                index = i;
+            }
+        }
+        return index;
+    }
+
+    function constellation (){
+        let search = prompt("Nhập ngôi sao cần tìm");
+        if(star(search)=== -1 ){
+            document.write(" Xin lỗi không tìm thấy! ")
+        }else {
+        for( let i = 0 ;i<constellation1.length;i++){
+            if(star(search) === i){
+                document.write(constellation1[i]);
+                break;
+
+            }}
+        }
+
+    }
+    let constellation1 = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+    let arryStar =[ "Polaris", "Aldebaran", "Deneb", "Vega", "Altair"," Dubhe", "Regulus"];
+
+    constellation();
+
+</script>
+</body>
+</html>
