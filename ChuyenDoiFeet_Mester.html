@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi Feet_Meters</title>
+</head>
+<body>
+<p>Chuyển đổi từ Feet sang Meters  chọn 1 </p>
+<p>Chuyển đổi từ Meters sang Feet  chọn 2 </p>
+<div id ="values">
+    <input type="button"  value="1" onclick="Convert(1);" /><br/>
+    <input type="button"  value="2" onclick="Convert(2);" /><br/>
+</div>
+
+
+
+<script>
+
+    function footToMeter (foot){
+
+         let meter = 0.305 * foot;
+        return meter;
+
+    }
+    function MetertFoot (meter){
+         let foot = 0.305 * meter;
+        return foot;
+
+    }
+    function Convert(option) {
+        let number = Number(prompt("Nhập so cần chuyển đổi  chuyển sang  Meter"));
+        let valuse = document.getElementById("values").value;
+        switch (option) {
+            case 1 :let a =footToMeter(number);
+            document.write(a);
+            break;
+            case 2 :let b = MetertFoot(number);
+            document.write(b);
+            break;
+
+
+        }
+
+    }
+
+</script>
+</body>
+</html>
