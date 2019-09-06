@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Kiểm tra Chuỗi đối xứng  </title>
+</head>
+<body>
+<script>
+function isPalindrome(str) {
+    let valid =true;
+    for(let i = 0 ;i<str.length;i++){
+        if(str[i] !==str[str.length-1-i]){
+            valid =false;
+        }
+    }
+    if(valid == false){
+        alert("String entered is  not a  palindrome");
+    }else{
+        alert("String entered is a palindrome ")
+    }
+}
+let Str =prompt("nhập chuỗi");
+isPalindrome(Str);
+
+</script>
+</body>
+</html>
