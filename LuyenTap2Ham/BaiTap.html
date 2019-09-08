@@ -115,9 +115,16 @@
   function bai7() {
      let a =Number(prompt("nhập sô a"));
      let b = Number(prompt("nhập số b"));
-     document.write("đổi chỗ "+b+","+a);
-
+     doicho(a,b);
+     //document.write("đổi chỗ "+b+","+a);
   }
+ function doicho(a,b){
+     let temp = a ;
+     a=b;
+     b =temp;
+     document.write("After swapping a: "+a+"and b:"+b)
+
+ }
 function bai8() {
      let a =Number(prompt("nhâp số  phần tử"))
      let arry = [];
